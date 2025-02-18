@@ -1,0 +1,411 @@
+/* Project Styles */
+.project-card:hover {
+    transform: scale(1.03);
+    transition: transform 0.2s ease;
+}
+.project-card {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project-card::before {
+    content: 'Click Me';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 30;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+}
+
+.project-card:hover img {
+    filter: contrast(120%) brightness(0.65);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+/* Modal Styles */
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    opacity: 0;
+    transition: all 0.4s ease-out;
+}
+
+.modal-container.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    background: linear-gradient(
+        135deg,
+        rgba(26, 26, 26, 0.95) 0%,
+        rgba(38, 38, 38, 0.9) 100%
+    );
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    padding: 2.5rem;
+    transform: translateY(-30px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+    max-height: 90vh;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 50px rgba(0, 0, 0, 0.3);
+}
+
+.modal-container.show .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+.modal-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+}
+
+.modal-header h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(
+        90deg,
+        #FF0066 0%,
+        #00FFFF 50%,
+        #FF3366 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    animation: shine 3s linear infinite;
+}
+
+.modal-image {
+    width: 100%;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* .modal-image img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+} */
+
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.modal-description {
+    line-height: 1.8;
+}
+
+.modal-description h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+.modal-tech {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.modal-tech h4 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+.modal-tech ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    list-style: none;
+    padding: 0;
+}
+
+.modal-tech li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.modal-tech li:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.modal-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-bottom: 20px;
+}
+
+.modal-links .btn {
+    flex: 1;
+    text-align: center;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-weight: normal;
+    transition: all 0.3s ease;
+}
+
+.modal-links .btn:first-child {
+    background: linear-gradient(135deg, #FF0066, #FF3366);
+    border: none;
+}
+
+.modal-links .btn:last-child {
+    background: linear-gradient(135deg, #00FFFF, #4DFFFF);
+    border: none;
+    color: #000;
+}
+
+.modal-links .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Scrollbar Styling */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .modal-header h2 {
+        font-size: 2rem;
+    }
+
+    .modal-links {
+        flex-direction: column;
+    }
+
+    .modal-tech ul {
+        flex-direction: column;
+    }
+
+    .modal-tech li {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Modal Image Carousel Styles */
+.modal-image-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.modal-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+} */
+
+.carousel-btn {
+    position: absolute; /* Changed from fixed to absolute */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Ensure exact vertical centering */
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+.carousel-btn i {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.image-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.indicator.active {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.2);
+}
+
+/* Animation for image transitions */
+.modal-image-container {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Fixed height */
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    overflow: hidden;
+}
+    .modal-image img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain; /* Ensures entire image is visible */
+        border-radius: 15px;
+        transition: transform 0.3s ease;
+    }
+
+@media (max-width: 768px) {
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+    }
+
+    .carousel-btn i {
+        font-size: 1rem;
+    }
+
+    .image-indicators {
+        gap: 8px;
+    }
+
+    .indicator {
+        width: 8px;
+        height: 8px;
+    }
+}
+

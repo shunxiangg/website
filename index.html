@@ -1,1 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shun Xiang - Home</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/theme-switch.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section with Logo and Navigation -->
+    <header>
+        <a href="index.html">
+            <div class="brand">
+                <img src="logo_white.png" alt="ShunXiang" class="theme-logo" style="height: 50px;">
+                <h1>ShunXiang</h1>
+            </div>
+        </a>
+        <div class="nav-controls">
+            <button class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="hamburger-button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <ul class="mobile-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+        </ul>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Landing Section with Welcome Text and 3D Canvas -->
+    <section class="landing-section">
+        <div class="landing-text">
+            <h2>Welcome to My Website!</h2>
+            <p>Hi, I'm Shunxiang! 👋 I'm a Year 2 Information Technology student at Ngee Ann Polytechnic, specializing in AI. This website showcases what I have done and what I am passionate about.</p>
+            <a href="Projects.html" class="btn">Start Exploring</a>
+        </div>
+        <div class="landing-3d">
+            <canvas id="canvas"></canvas>
+        </div>
+    </section>
+
+    <!-- Show case the projects that i have done-->
+    <section class="home-section">
+        <h2 class="explore-text">Creations & Collaborations</h2>
+        <section class="explore-sell-section">
+            <a href="Projects.html">
+                <div class="explore-card tilt-card">
+                    <h2>EXPLORE PRODUCTS</h2>
+                    <img src="explore-icon.svg" alt="Explore Icon">
+                </div>
+            </a>
+            <a href="Projects.html">
+
+                <div class="sell-card tilt-card">
+                    <h2>SELL HARDWARE</h2>
+                    <img src="sell-icon.svg" alt="Sell Icon">
+                </div>
+            </a>
+        </section>
+        <!-- ADD my projects Section -->
+        <section class="trending-section">
+            <h2>Explore my Projects</h2>
+            <p>based on number of offers made</p>
+            <div class="project-card-container">
+                <!-- cards displaying projects -->
+                <div href="Projects.html#projects-details" class="project-card" data-project-id="retro-website">
+                    <div class="gradient-blur">
+                        <section class="project-info-section">
+                            <h2>Retro website</h2>
+                        </section>
+                        <img src="potfolio_IMG/FED_Assg1.png" alt="Project Image">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                
+                <div href="Projects.html#projects-details" class="project-card" data-project-id="EVA-website">
+                    <div class="gradient-blur">
+                        <section class="project-info-section">
+                            <h2>Retro website</h2>
+                        </section>
+                        <img src="potfolio_IMG/FED_Assg1.png" alt="Project Image">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div href="Projects.html#projects-details" class="project-card" data-project-id="retro-website">
+                    <div class="gradient-blur">
+                        <section class="project-info-section">
+                            <h2>Retro website</h2>
+                        </section>
+                        <img src="potfolio_IMG/FED_Assg1.png" alt="Project Image">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div href="Projects.html#projects-details" class="project-card" data-project-id="retro-website">
+                    <div class="gradient-blur">
+                        <section class="project-info-section">
+                            <h2>Retro website</h2>
+                        </section>
+                        <img src="potfolio_IMG/FED_Assg1.png" alt="Project Image">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+
+        </section>
+
+        <!-- Why Choose Mokesell Section with Benefits -->
+        <!-- <section class="why-section">
+            <div class="why-text">
+                <h2>Why choose Mokesell?</h2>
+                <p>At Mokesell, we believe in making technology affordable, sustainable, and accessible. Here's why you
+                    should choose us:</p>
+                <ul>
+                    <li><strong>Affordable and Quality Products:</strong> Find high-quality second-hand PCs, GPUs, CPUs,
+                        and monitors at a fraction of the cost of new hardware. Mokesell connects you with trusted
+                        sellers, ensuring you get great value for your money.</li>
+
+                    <li><strong>Sustainable Tech:</strong> By choosing second-hand, you're helping reduce electronic
+                        waste and supporting a more sustainable tech ecosystem. Every purchase helps conserve resources
+                        and minimizes environmental impact.</li>
+
+                    <li><strong>Customizable and Flexible Options:</strong> Mokesell gives you the freedom to find
+                        exactly what you need, with a wide range of second-hand computing hardware available. Whether
+                        you're upgrading a single component or outfitting an entire system, our platform allows you to
+                        choose from various options that fit your budget and preferences.</li>
+
+                    <li><strong>Community-Driven:</strong> Mokesell is powered by a community of tech enthusiasts and
+                        everyday users. Join a growing network where you can discover great deals, share knowledge, and
+                        be part of a movement toward smarter, sustainable tech.</li>
+                </ul>
+
+                <p>Choose Mokesell and make your next tech purchase a win for both your wallet and the planet!</p>
+            </div>
+            <div class="why-img">
+                <img class="tilt-card" src="potfolio_IMG/self_cartoon.png">
+                <p><strong>Me:</strong> Shun Xiang</p>
+            </div>
+        </section> -->
+        
+    </section>
+
+
+
+    <!-- Modal Container -->
+    <div class="modal-container">
+        <div class="modal-content">
+            <button class="modal-close">×</button>
+            <div class="modal-header">
+                <h2 id="modal-title"></h2>
+                <p id="modal-subtitle"></p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-img" src="" alt="Project Image">
+                </div>
+                <div class="modal-details">
+                    <h3>Project Details</h3>
+                    <div id="modal-description"></div>
+                    <div class="modal-tech">
+                        <h4>Technologies Used</h4>
+                        <ul id="modal-tech-list"></ul>
+                    </div>
+                    <div class="modal-links">
+                        <a href="#" id="modal-demo" class="btn" target="_blank">Live Demo</a>
+                        <a href="#" id="modal-github" class="btn" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer Section with Links and Social Media -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html">
+                    <img src="potfolio_IMG/self_cartoon.png" style="height: 40px;">
+                    <h2>SX</h2>
+                </a>
+            </div>
+
+            <div class="footer-links">
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="facebook-logo.svg" alt="Facebook" style="height: 24px;">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="instagram-logo.svg" alt="Instagram" style="height: 24px;">
+                </a>
+                <a href="https://github.com/shunxiangg" target="_blank">
+                    <img src="github-logo.svg" alt="GitHub" style="height: 24px;">
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shun Xiang. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="theme-switch.js"></script>
+    <script src="mouse-gradient.js"></script>
+    <script type="module" src="script.js"></script>
+    <script src="projects.js"></script>
+</body>
+
+</html>

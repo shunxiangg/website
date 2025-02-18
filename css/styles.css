@@ -1,0 +1,1149 @@
+/* Define fonts */
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    background-color: #0A0A0A;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    color: #ffffff;
+}
+body {
+    overflow-x: hidden;
+}
+header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+}
+header a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* .brand h1 {
+    font-weight: normal;
+    background: linear-gradient(90deg, #FFFFFF 10%, #628150 20.9%, #82C35C 30%, #FFFFFF 40%,
+     #628150 45.9%, #82C35C 50%, #FFFFFF 60%, #628150 75.9%, #82C35C 80%, #FFFFFF 60%,
+      #628150 75.9%, #82C35C 80%, #FFFFFF 60%, #628150 75.9%, #82C35C 80%
+     );
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2.2rem;
+} */
+.brand h1 {
+    font-size: 2rem; /* Larger font size */
+    background: linear-gradient(
+        90deg,
+        #FF0066 0%,    /* Neon Pink */
+        #00FFFF 20%,   /* Cyan */
+        #FF3366 40%,   /* Bright Pink */
+        #4DFFFF 60%,   /* Light Cyan */
+        #FF1493 80%,   /* Deep Pink */
+        #FF0066 100%   /* Back to Neon Pink */
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    animation: shine 3s linear infinite;
+}
+
+/* Animation for the gradient movement */
+@keyframes shine {
+    from {
+        background-position: 0% center;
+    }
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* Light mode version - using darker, but still vibrant colors */
+body.light-mode .brand h1 {
+    background: linear-gradient(
+        90deg,
+        #1d0d75c9 0%,    /* Deep Navy */
+        #5b127569 20%,   /* Deep Purple */
+        #293081b2 40%,   /* Royal Blue */
+        #2f6b498e 60%,   /* Dark Forest Green */
+        #8122539d 80%,   /* Deep Burgundy */
+        #86182e93 100%   /* Deep Crimson */
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    animation: shine 3s linear infinite;
+}
+.brand h1 {
+    text-shadow: 0 0 10px rgba(255, 0, 102, 0.3);
+}
+
+/* Add a little hover effect */
+.brand h1:hover {
+    animation-duration: 1s; /* Speed up on hover */
+}
+
+body.light-mode .brand h1:hover {
+    animation-duration: 1s; /* Speed up on hover */
+
+}
+@media screen and (max-width: 900px) {
+    /* Existing styles */
+    header {
+        padding: 0.8rem 2rem;
+    }
+
+    /* New styles for brand logo and text */
+    .brand {
+        gap: 1rem; /* Reduce gap between logo and text */
+    }
+
+    .brand img {
+        height: 35px !important; /* Override inline style */
+    }
+
+    .brand h1 {
+        font-size: 1.5rem; /* Smaller font size for brand name */
+    }
+
+    /* Adjust nav controls for theme toggle and hamburger */
+    .nav-controls {
+        gap: 0.5rem;
+    }
+
+    .theme-toggle,
+    .hamburger-button {
+        font-size: 1.2rem;
+        padding: 0.3rem;
+    }
+
+    /* Rest of your existing mobile styles */
+    .landing-text   {
+        padding: 2rem;
+    }
+    .landing-text p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .landing-3d {
+        display: none;
+    }
+    #canvas {
+        display: none;
+    }
+    .main-nav {
+        display: none;
+    }
+    /* ... rest of your media query styles ... */
+}
+
+/* Additional breakpoint for even smaller screens */
+@media screen and (max-width: 480px) {
+    .brand img {
+        height: 40px !important;
+    }
+
+    .brand h1 {
+        font-size: 1.3rem;
+    }
+
+    header {
+        padding: 0.8rem 1rem;
+    }
+}
+
+/*  */
+.main-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+}
+
+.main-nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    list-style: none;
+    align-items: center;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.landing-section {
+    background-image: url('/landing-bg.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+
+}
+
+.landing-text {
+    flex: 5.5;
+    padding: 6rem;
+}
+
+.landing-text p {
+    font-size: 1.1rem;
+    line-height: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.landing-3d {
+    flex: 4.5;
+    height: 80%;
+}
+
+.btn {
+    display: inline-block;
+    /* Ensures proper sizing and padding */
+    padding: 20px 40px;
+    /* Adjust padding as needed */
+    border: 2px solid #ffffff;
+    /* Adds a border with your desired color */
+    border-radius: 25px;
+    /* Makes the button rounded */
+    background-color: transparent;
+    /* Transparent background */
+    color: #ffffff;
+    /* Text color matching the border */
+    text-decoration: none;
+    /* Removes underline from the link */
+    font-size: 16px;
+    /* Adjust font size as needed */
+    text-align: center;
+    /* Centers text within the button */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effects */
+    cursor: pointer;
+
+}
+
+.btn:hover {
+    background-color: #ffffff4b;
+    /* Adds a filled background on hover */
+    color: white;
+    /* Changes text color to white on hover */
+}
+
+#canvas {
+    display: block;
+    position: relative;
+    /* Adjust position to be relative to the .landing-3d container */
+    z-index: 1;
+    /* Lower z-index so it doesn't overlap too much with the text */
+    width: 100%;
+    /* Ensure it doesn't overflow */
+    height: 100%;
+    /* Keep it within the bounds of its container */
+}
+
+.home-section {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #0A0A0A;
+    padding: 4rem 6rem;
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: transparent;
+}
+
+.marquee-content {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll 15s linear infinite;
+}
+
+.marquee-content span {
+    margin-right: 5rem;
+    flex-shrink: 0;
+    padding: 1rem 0;
+}
+
+/* This is the animation for the marquee */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Create a duplicate set of content */
+.marquee-content {
+    display: inline-flex;
+}
+
+
+.marquee-content span {
+    display: inline-flex;
+}
+
+/* Featured card styling with mesh gradient generated */
+.featured-card {
+    background-color:hsla(240,45%,50%,1);
+    background-image:
+    radial-gradient(at 35% 7%, hsla(246,76%,69%,1) 0px, transparent 50%),
+    radial-gradient(at 28% 25%, hsla(183,22%,30%,1) 0px, transparent 50%),
+    radial-gradient(at 72% 96%, hsla(302,20%,42%,1) 0px, transparent 50%),
+    radial-gradient(at 42% 95%, hsla(163,27%,41%,1) 0px, transparent 50%),
+    radial-gradient(at 9% 58%, hsla(263,97%,67%,1) 0px, transparent 50%),
+    radial-gradient(at 50% 45%, hsla(268,72%,61%,1) 0px, transparent 50%),
+    radial-gradient(at 32% 87%, hsla(161,69%,73%,1) 0px, transparent 50%);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 50vh;
+    border-radius: 25px;
+    padding: 0.5rem 3rem;
+    padding-bottom: 10rem;
+
+}
+
+.featured-card h2 {
+    font-size: 2.5rem;
+    color: #E9E9E9;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: -0.5rem;
+    padding-bottom: 0;
+
+}
+
+.featured-card p {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.featured-card ol {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0rem;
+    font-size: 1.1rem;
+}
+
+.feature-card ol li {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.profile-btn {
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.trending-section {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #0A0A0A;
+    padding: 4rem 0rem;
+    width: 100%;
+}
+
+.trending-section h2 {
+    font-weight: normal;
+    font-size: 2.5rem;
+    margin-bottom: 0rem;
+}
+
+/* .products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    flex-direction: column;
+} */
+
+.project-card-container {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(3,1fr);
+    gap: 4rem;
+    margin-top: 3rem;
+    width: 100%;
+    flex-direction: column;
+}
+.gradient-blur img {
+    max-width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.gradient-blur {
+    position: relative;
+    z-index: 5;
+    pointer-events: none;
+    border-radius: 15px;
+}
+.project-card {
+    flex: 1;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: transform 0.2s ease;
+    
+}
+.project-card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    aspect-ratio: 5/5;
+    object-fit: cover;
+}
+/* Progressive gradient blur effect */
+.gradient-blur > div,
+.gradient-blur::before,
+.gradient-blur::after {
+    
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+}
+/* Progressive gradient blur effect - uses divs stack on each other, with varying opacity masking*/
+.gradient-blur > div:nth-of-type(1) {
+    z-index: 6;
+    backdrop-filter: blur(3px); /* Decreased blur amount */
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 62.5%, 
+      rgba(0, 0, 0, 1) 75%, 
+      rgba(0, 0, 0, 1) 87.5%, 
+      rgba(0, 0, 0, 0) 100%
+    ); /* For better cross-browser support */
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 62.5%, 
+      rgba(0, 0, 0, 1) 75%, 
+      rgba(0, 0, 0, 1) 87.5%, 
+      rgba(0, 0, 0, 0) 100%
+    );
+}
+
+
+.gradient-blur > div:nth-of-type(2) {
+    z-index: 7;
+    backdrop-filter: blur(5px); /* Increased blur amount */
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 75%, 
+      rgba(0, 0, 0, 1) 87.5%, 
+      rgba(0, 0, 0, 1) 100%
+    ); /* For better cross-browser support */
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 75%, 
+      rgba(0, 0, 0, 1) 87.5%, 
+      rgba(0, 0, 0, 1) 100%
+    );
+}
+
+
+.project-info-section {
+    position: absolute;
+    z-index: 20;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+.project-info-section h2, .project-info-section p{
+    margin-bottom: 0rem;
+    margin-top: 0.5rem;
+    font-weight: normal;
+    color: white; /* Default color */
+    mix-blend-mode: difference;
+    font-size: 1.7rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+}
+.project-info-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2); 
+    filter: blur(5px);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    z-index: 19;
+  }
+
+
+.explore-sell-section {
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+    margin-top: 2rem;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.explore-card img {
+    top: 0rem;
+    right: 0rem;
+    position: absolute;
+    height: 10vh;
+    margin: 1.5rem 2.5rem;
+}
+
+.explore-card h2 {
+    position: absolute;
+    bottom: 0rem;
+    font-size: 2.5rem;
+}
+.explore-sell-section a {
+    flex: 1;
+
+}
+.explore-card {
+    /* Ensures both cards take up equal space */
+    height: 40vh;
+    background-color: #1a1a1a;
+    background-image:
+        radial-gradient(at 52% 13%, #4b6cb7 0px, transparent 50%),    /* Blue */
+        radial-gradient(at 7% 97%, #182848 0px, transparent 50%),     /* Dark Blue */
+        radial-gradient(at 56% 42%, #2C5364 0px, transparent 50%),    /* Teal */
+        radial-gradient(at 55% 82%, #203A43 0px, transparent 50%),    /* Dark Teal */
+        radial-gradient(at 62% 88%, #2C5364 0px, transparent 50%),    /* Teal */
+        radial-gradient(at 58% 5%, #4b6cb7 0px, transparent 50%),     /* Blue */
+        radial-gradient(at 60% 37%, #1e3c72 0px, transparent 50%);    /* Navy Blue */
+    border-radius: 25px;
+    position: relative;
+    padding: 5rem 2rem;
+
+}
+
+.sell-card h2 {
+    position: absolute;
+    bottom: 0rem;
+    font-size: 2.5rem;
+    
+
+}
+
+.sell-card img {
+    top: 0rem;
+    right: 0rem;
+    position: absolute;
+    height: 10vh;
+    margin: 1.5rem 2.5rem;
+
+}
+
+.sell-card {
+    /* Ensures both cards take up equal space */
+    height: 40vh;
+    background-color: #2d1b4e;
+    background-image:
+        radial-gradient(at 92% 13%, #7928CA 0px, transparent 50%),    /* Bright Purple */
+        radial-gradient(at 5% 8%, #FF0080 0px, transparent 50%),      /* Pink */
+        radial-gradient(at 28% 7%, #7928CA 0px, transparent 50%),     /* Purple */
+        radial-gradient(at 85% 3%, #FF0080 0px, transparent 50%),     /* Pink */
+        radial-gradient(at 65% 70%, #4C1D95 0px, transparent 50%),    /* Deep Purple */
+        radial-gradient(at 9% 90%, #6B46C1 0px, transparent 50%),     /* Medium Purple */
+        radial-gradient(at 55% 18%, #9F7AEA 0px, transparent 50%);    /* Light Purple */
+    border-radius: 25px;
+    padding: 5rem 2rem;
+    position: relative;
+
+}
+
+.why-section {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5rem;
+
+}
+
+.why-text h2 {
+    font-weight: normal;
+    font-size: 2.5rem;
+    margin-bottom: 0rem;
+}
+
+.why-text p,
+.why-text li {
+    font-size: 1.1rem;
+    line-height: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.why-text {
+    flex: 3;
+}
+
+.why-img {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    padding: 2rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.why-img img {
+    border-radius: 25px;
+    aspect-ratio: 1 / 1;
+    width: 50%;
+    object-fit: cover;
+}
+
+.review-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.review-section h2 {
+    font-weight: normal;
+    font-size: 2.5rem;
+}
+.reviewCard{
+    flex-basis: 30%;
+    background: #A73689;
+    background: linear-gradient(135deg, #A73689, #4168FD);
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 10px 15px;
+    border: solid;
+    box-shadow: rgba(90, 69, 228, 0.4) -5px 5px, rgba(90, 69, 228, 0.3) -10px 10px, rgba(90, 69, 228, 0.2) -15px 15px, rgba(90, 69, 228, 0.1) -20px 20px, rgba(90, 69, 228, 0.05) -25px 25px;
+}
+
+/* Disable scrollbar for cards */
+#cards::-webkit-scrollbar {
+    display: none;
+}
+.profilePicture{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Review Card design that is split into top part (Profile picture and name) and bottom part (review) */
+.topCard{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.topCard h3{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3vw;
+    overflow: hidden;
+}
+.botCard p{
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+    font-size: 1vw;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+#cards{
+    display: flex;
+    gap: 2.5rem;
+    justify-content: space-between;
+}
+.reviews{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+
+/* Styling for toast notification */
+.toast {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    background-color: #242C32;
+    color: #ffffff;
+    padding: 0.8rem 2.5rem;
+    border-radius: 15px;
+    min-width: 250px;
+    max-width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    transform: translate(-50%, -20px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+/* Show Toast */
+.toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.toast p {
+    margin: 0;
+}
+.toast h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.toast-content {
+    flex: 6;
+}
+.toast-icon {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger-button {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 100;
+    color: white; /* Make the icon white to match your theme */
+    font-size: 1.5rem;
+}
+
+.hamburger-button i {
+    display: block;
+    color: white;
+}
+
+@media screen and (max-width: 900px) {
+    .hamburger-button {
+        display: block;
+    }
+}
+
+/* Styling for mobile menu */
+.mobile-menu {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 3;
+    right: 0;
+    top: 6rem;
+    width: 50%;
+    transition: all 0.1s;
+    transform: translateX(100%);
+    background: rgba(87, 87, 87, 0.5);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    text-align: left;
+    border-radius: 45px 0px 0px 45px;
+}
+/* When open class is added, the menu will slide in from the right */
+.open.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* Changed from center to flex-start for left alignment */
+    justify-content: flex-start; /* Changed from space-between */
+    padding: 4rem 2rem; /* Reduced padding for better spacing */
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 30;
+    gap: 2rem; /* Added gap between menu items */
+}
+/* Mobile menu styling */
+/* Update mobile menu link styles */
+.mobile-menu li {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px; /* Match the border radius of the link */
+}
+
+.mobile-menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    display: block;
+    width: 100%;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    overflow: hidden; /* Contain the gradient */
+}
+
+/* Gradient background */
+.mobile-menu li .gradient-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 12px; /* Match the border radius */
+    background-clip: padding-box; /* Clip the gradient to the border */
+}
+
+/* Hover effect */
+/* .mobile-menu li a:hover {
+    background-color: rgba(130, 195, 92, 0.2);
+    text-decoration: underline;
+    color: #82C35C;
+} */
+
+/* Active/Selected state */
+/* .mobile-menu li a.active {
+    background-color: rgba(130, 195, 92, 0.3);
+    color: #82C35C;
+    text-decoration: underline;
+} */
+
+
+/* body.light-mode .mobile-menu li a:hover {
+    background-color: rgba(130, 195, 92, 0.1);
+    color: #82C35C;
+}
+
+body.light-mode .mobile-menu li a.active {
+    background-color: rgba(130, 195, 92, 0.2);
+    color: #82C35C;
+} */
+
+
+/* Mobile menu base styles */
+.mobile-menu {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 3;
+    right: 0;
+    top: 6rem;
+    width: 50%;
+    transition: all 0.3s ease;
+    transform: translateX(100%);
+    border-radius: 45px 0px 0px 45px;
+}
+
+/* Dark mode menu with shadow */
+body:not(.light-mode) .mobile-menu {
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+        -5px 0 15px rgba(0, 0, 0, 0.3),
+        inset 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+/* Light mode menu with shadow */
+body.light-mode .mobile-menu {
+    background: rgba(51, 51, 51, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(130, 195, 92, 0.2);
+    box-shadow: 
+        -5px 0 20px rgba(0, 0, 0, 0.2),
+        inset 0 0 15px rgba(130, 195, 92, 0.1);
+}
+
+/* When menu is open */
+.open.mobile-menu {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Light mode button text */
+body.light-mode .mobile-menu li a {
+    color: white; /* Keep text white for contrast */
+}
+
+/* Dark mode gradient */
+body:not(.light-mode) .mobile-menu li .gradient-bg {
+    background: radial-gradient(
+        circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(75, 108, 183, 0.9) 0%,
+        rgba(44, 83, 100, 0.7) 30%,
+        rgba(24, 40, 72, 0.5) 60%,
+        transparent 100%
+    );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styling for footer components */
+footer {
+    background-color: #1b1b1b;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-brand a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-brand h2 {
+    margin-left: 10px;
+    font-size: 1.5rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+.explore-text{
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+/* Responsive design */
+@media screen and (max-width: 900px) {
+    header {
+        padding: 0.8rem 2rem;
+    }
+    .landing-text   {
+        padding: 2rem;
+    }
+    .landing-text p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .landing-3d {
+        display: none;
+    }
+    #canvas {
+        display: none;
+    }
+    .main-nav {
+        display: none;
+    }
+  
+    .explore-sell-section {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .home-section {
+        padding: 4rem 2rem;
+    }
+    .trending-section {
+        padding: 4rem 2rem;
+    }
+    .why-section {
+        flex-direction: column;
+    }
+    .explore-card {
+        height: 40vh;
+        flex: none;
+    }
+    .sell-card {
+        height: 40vh;
+        flex: none;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-brand h2 {
+        font-size: 1.2rem;
+    }
+
+    .footer-links a {
+        font-size: 0.8rem;
+    }
+
+    .footer-social {
+        margin-top: 10px;
+    }
+
+    .footer-bottom {
+        font-size: 0.7rem;
+    }
+    #cards{
+        display: flex;
+        flex-direction: column;
+        padding: 20px 30px;
+        gap: 30px;
+        justify-content: center;
+    }
+    .topCard h3{
+        font-family: "Poppins", sans-serif;
+        font-size: 1em;
+        overflow: hidden;
+    }
+    .botCard p{
+        font-family: "Poppins", sans-serif;
+        overflow: hidden;
+        font-size: 1em;
+    }
+    #Reviews h1{
+        font-size: 2rem;
+    }
+    .project-card-container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+/* Dark mode gradient (keeping current colors) */
+body:not(.light-mode) .mobile-menu li .gradient-bg {
+    background: radial-gradient(
+        circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(75, 108, 183, 0.9) 0%,
+        rgba(44, 83, 100, 0.7) 30%,
+        rgba(24, 40, 72, 0.5) 60%,
+        transparent 100%
+    );
+}
+
+/* Light mode gradient with darker colors */
+body.light-mode .mobile-menu li .gradient-bg {
+    background: radial-gradient(
+        circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(51, 51, 51, 0.95) 0%,
+        rgba(68, 68, 68, 0.85) 30%,
+        rgba(85, 85, 85, 0.75) 60%,
+        transparent 100%
+    );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

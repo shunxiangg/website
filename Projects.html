@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shun Xiang - Projects</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/theme-switch.css">
+    <link rel="stylesheet" href="css/productPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <a href="index.html">
+            <div class="brand">
+                <img src="logo_white.png" alt="ShunXiang" class="theme-logo" style="height: 50px;">
+                <h1>ShunXiang</h1>
+            </div>
+        </a>
+        <div class="nav-controls">
+            <button class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="hamburger-button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <ul class="mobile-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+        </ul>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Landing Section -->
+    <section class="landing-section">
+        <div class="landing-text">
+            <h2>My Projects</h2>
+            <p>A showcase of my journey in technology, featuring various projects in AI, web development, and more. Each project represents a step in my learning journey and demonstrates my passion for creating innovative solutions.</p>
+        </div>
+        <div class="landing-3d">
+            <canvas id="canvas"></canvas>
+        </div>
+    </section>
+
+
+
+
+    <section class="projects-section">
+        <div class="project-container">
+            <!-- Project 1: Retro Website -->
+            <article class="project-card">
+                <div class="project-header">
+                    <div class="project-title">
+                        <h2>Retro Website</h2>
+                        <p class="subtitle">FED Assignment 1</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://shunxiangg.github.io/FED_10270399D_AngShunXiang_Assg1_website/" class="btn" target="_blank">Live Demo</a>
+                        <a href="https://github.com/shunxiangg/FED_10270399D_AngShunXiang_Assg1_website" class="btn" target="_blank">GitHub</a>
+                    </div>
+                </div>
+    
+                <div class="project-body">
+                    <div class="project-tech">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+    
+                    <div class="project-description">
+                        <h3>Project Description</h3>
+                        <p>A retro-inspired website that brings to life the classic web design of the late '90s and early 2000s, showcasing vibrant colors and nostalgic elements.</p>
+                        
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Vintage Color Scheme with bold and vibrant hues</li>
+                            <li>Retro Typography that evokes nostalgia</li>
+                            <li>Interactive Elements including animations and spinning disk</li>
+                            <li>Vintage items showcase with music and images</li>
+                            <li>Shopping cart functionality with total amount calculation</li>
+                            <li>Background music with volume control</li>
+                            <li>Interactive gallery with clickable songs</li>
+                        </ul>
+                    </div>
+    
+                    <div class="project-images">
+                        <div class="image-gallery">
+                            <img src="potfolio_IMG/FED_Assg1.png" alt="Retro Website Homepage">
+                            <img src="potfolio_IMG/FED_Assg1_about.png" alt="About Page">
+                            <img src="potfolio_IMG/FED_Assg1_upcomingShow.png" alt="Upcoming Shows">
+                            <img src="potfolio_IMG/FED_Assg1_gallery.png" alt="Gallery">
+                        </div>
+                    </div>
+                </div>
+            </article>
+    
+            <!-- Additional projects can be added here following the same structure -->
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <style>
+        /* Projects Section Overall Layout */
+        .projects-section {
+            padding: 2rem 6rem;
+            max-width: 100%;
+            margin: 0;
+        }
+    
+        .project-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            margin-top: 4rem;
+        }
+    
+        /* Project Card Base Styles */
+        .project-card {
+            border-radius: 25px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        /* Project Card Gradient Backgrounds */
+        .project-card:nth-child(1) {
+            background: linear-gradient(70deg, 
+                rgba(75, 108, 183, 0.9) 0%, 
+                rgba(44, 83, 100, 0.7) 25%, 
+                rgba(24, 40, 72, 0.5) 45%,
+                rgba(24, 40, 72, 0.5) 65%, 
+                rgba(44, 83, 100, 0.7) 85%, 
+                rgba(75, 108, 183, 0.9) 100%
+            );
+        }
+
+        .project-card:nth-child(2) {
+            background: linear-gradient(170deg, 
+                rgba(120, 40, 200, 0.9) 0%, 
+                rgba(80, 20, 140, 0.7) 25%, 
+                rgba(50, 10, 90, 0.5) 45%,
+                rgba(50, 10, 90, 0.5) 65%,
+                rgba(80, 20, 140, 0.7) 85%, 
+                rgba(120, 40, 200, 0.9) 95%
+                
+            );
+        }
+    
+        .project-card:nth-child(3) {
+            background: linear-gradient(135deg, 
+                rgba(30, 215, 96, 0.9) 0%, 
+                rgba(20, 140, 65, 0.7) 50%, 
+                rgba(10, 90, 40, 0.5) 100%
+            );
+        }
+    
+        .project-card:nth-child(4) {
+            background: linear-gradient(1385deg, 
+                rgba(255, 64, 129, 0.9) 0%, 
+                rgba(200, 40, 100, 0.7) 50%, 
+                rgba(150, 20, 70, 0.5) 100%
+            );
+        }
+
+    /* Light Mode Project Card Gradients */
+    body.light-mode .project-card:nth-child(1) {
+        background: linear-gradient(70deg,
+            rgba(173, 216, 230, 0.2) 0%,      /* Light Blue */
+            rgba(135, 206, 250, 0.15) 25%,    /* Sky Blue */
+            rgba(176, 196, 222, 0.1) 45%,     /* Pale Blue */
+            rgba(100, 149, 237, 0.08) 65%,    /* Cornflower Blue */
+            rgba(123, 104, 238, 0.05) 85%,    /* Medium Slate Blue */
+            rgba(106, 90, 205, 0.03) 100%     /* Slate Blue */
+        );
+    }
+
+    
+        /* Project Header Styling */
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(66, 51, 51, 0.1);
+        }
+    
+        .project-title h2 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin: 0;
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+    
+        .subtitle {
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 0.5rem;
+        }
+    
+        /* Project Links */
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+    
+        .project-links .btn {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+    
+        .project-links .btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+    
+        /* Project Body */
+        .project-body {
+            padding: 2rem;
+            display: grid;
+            gap: 2rem;
+            flex-grow: 1;
+        }
+    
+        /* Technologies Tags */
+        .project-tech h3 {
+            color: #ffffff;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+    
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+    
+        .tag {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    
+        /* Project Description */
+        .project-description h3 {
+            color: #ffffff;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+    
+        .project-description p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+    
+        .project-description ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+    
+        .project-description li {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.5rem;
+        }
+    
+        /* Image Gallery */
+        .project-images {
+            margin-top: 2rem;
+        }
+    
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+    
+        .image-gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    
+        .image-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+    
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .projects-section {
+                padding: 2rem 2rem;
+            }
+    
+            .project-card {
+                min-height: auto;
+            }
+        }
+    
+        @media (max-width: 768px) {
+            .project-header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+    
+            .project-links {
+                width: 100%;
+                flex-direction: column;
+            }
+    
+            .project-links .btn {
+                width: 100%;
+                text-align: center;
+            }
+    
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    
+        /*-------------------------------- Light Mode Adjustments ------------------------------*/
+      
+    body.light-mode .project-card:nth-child(2) {
+        background: linear-gradient(70deg,
+            rgba(238, 130, 238, 0.2) 0%,      /* Violet */
+            rgba(221, 160, 221, 0.15) 25%,    /* Plum */
+            rgba(218, 112, 214, 0.1) 45%,     /* Orchid */
+            rgba(186, 85, 211, 0.08) 65%,     /* Medium Orchid */
+            rgba(147, 112, 219, 0.05) 85%,    /* Medium Purple */
+            rgba(138, 43, 226, 0.03) 100%     /* Blue Violet */
+        );
+    }
+
+    body.light-mode .project-card:nth-child(3) {
+        background: linear-gradient(70deg,
+            rgba(144, 238, 144, 0.2) 0%,      /* Pale Green */
+            rgba(152, 251, 152, 0.15) 25%,    /* Pale Green */
+            rgba(124, 252, 0, 0.1) 45%,       /* Lawn Green */
+            rgba(50, 205, 50, 0.08) 65%,      /* Lime Green */
+            rgba(34, 139, 34, 0.05) 85%,      /* Forest Green */
+            rgba(0, 128, 0, 0.03) 100%        /* Green */
+        );
+    }
+
+    body.light-mode .project-card:nth-child(4) {
+        background: linear-gradient(70deg,
+            rgba(255, 182, 193, 0.2) 0%,      /* Light Pink */
+            rgba(255, 160, 122, 0.15) 25%,    /* Light Salmon */
+            rgba(255, 140, 105, 0.1) 45%,     /* Coral */
+            rgba(255, 99, 71, 0.08) 65%,      /* Tomato */
+            rgba(220, 20, 60, 0.05) 85%,      /* Crimson */
+            rgba(178, 34, 34, 0.03) 100%      /* Firebrick */
+        );
+    }
+        body.light-mode .project-header {
+            background: rgba(0, 0, 0, 0.05);
+            border-bottom-color: rgba(0, 0, 0, 0.1);
+        }
+    
+        body.light-mode .project-title h2 {
+            color: #1a1a1a;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    
+        body.light-mode .subtitle {
+            color: rgba(0, 0, 0, 0.7);
+        }
+    
+        body.light-mode .project-links .btn {
+            background-color: rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            color: #1a1a1a;
+        }
+    
+        body.light-mode .project-links .btn:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    
+        body.light-mode .project-description h3,
+        body.light-mode .project-tech h3 {
+            color: #1a1a1a;
+        }
+    
+        body.light-mode .project-description p,
+        body.light-mode .project-description li {
+            color: rgba(0, 0, 0, 0.8);
+        }
+    
+        body.light-mode .tag {
+            background-color: rgba(0, 0, 0, 0.05);
+            color: rgba(0, 0, 0, 0.8);
+            border-color: rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+
+
+
+
+
+
+     
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html">
+                    <img src="potfolio_IMG/self_cartoon.png" style="height: 40px;">
+                    <h2>SX</h2>
+                </a>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="https://facebook.com/mokesell" target="_blank">
+                    <img src="facebook-logo.svg" alt="Facebook" style="height: 24px;">
+                </a>
+                <a href="https://instagram.com/mokesell" target="_blank">
+                    <img src="instagram-logo.svg" alt="Instagram" style="height: 24px;">
+                </a>
+                <a href="https://github.com/fisherman-23/FED-Assg2-Mokesell" target="_blank">
+                    <img src="github-logo.svg" alt="GitHub" style="height: 24px;">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 mokesell. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="theme-switch.js"></script>
+    <script src="mouse-gradient.js"></script>
+    <script type="module" src="script.js"></script>
+    <script src="js/animals.js"></script>
+    <script src="projects.js"></script>
+</body>
+</html>
